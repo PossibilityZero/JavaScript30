@@ -6,10 +6,6 @@ Starter Files + Completed solutions for the JavaScript 30 Day Challenge.
 
 Grab the course at [https://JavaScript30.com](https://JavaScript30.com)
 
-## Kai's Solutions
-
-Check out my solutions [here](https://possibilityzero.github.io/Javascript30)
-
 ## Community #JavaScript30 Content
 
 Feel free to submit a PR adding a link to your own recaps, guides or reviews!
@@ -43,6 +39,7 @@ Feel free to submit a PR adding a link to your own recaps, guides or reviews!
 * [Abid Hasan's](https://github.com/sabidhasan/javascript-30) completion of all challenges. This was awesome!! Learned so much! :+1:
 * [Yusong Notes](https://sky172839465.github.io/course/js30) Records Yusong JS 30 days note and demo :star2:
 * [Herminio Torres](https://github.com/herminiotorres/JavaScript30) lessons and tricks learned, and a [gh-page](https://herminiotorres.github.io/JavaScript30/) to see working all the mini-projects.
+* [Kai Nakazawa](https://possibilityzero.github.io/JavaScript30) Solutions
 
 ## A note on Pull Requests
 
