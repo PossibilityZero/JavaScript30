@@ -8,13 +8,22 @@
 
   <script>
     // start with strings, numbers and booleans
+    let age = 100;
+    let age2 = age;
+    console.log(age, age2);
+    age = 102;
+    console.log(age, age2);
 
     // Let's say we have an array
     const players = ['Wes', 'Sarah', 'Ryan', 'Poppy'];
 
     // and we want to make a copy of it.
+    const team = players;
+    console.log(players, team);
 
     // You might think we can just do something like this:
+    team.push('Mark');
+    console.log(players, team);
 
     // however what happens when we update that array?
 
@@ -26,11 +35,15 @@
 
     // So, how do we fix this? We take a copy instead!
 
+    const team2 = players.slice();
     // one way
 
     // or create a new array and concat the old one in
 
     // or use the new ES6 Spread
+    const team4 = [...players];
+    team4.push('Dave');
+    console.log(players, team, team4);
 
     // now when we update it, the original one isn't changed
 
@@ -43,8 +56,12 @@
     };
 
     // and think we make a copy:
+    const captain = person;
+    captain.number = 99;
 
     // how do we take a copy instead?
+    const captain2 = Object.assign({}, person, {number: 88});
+    captain2.number = 88;
 
     // We will hopefully soon see the object ...spread
 
