@@ -10,14 +10,14 @@ function clearList() {
     }
 }
 
-function createNewListItem(text, done=false) {
+function createNewListItem(index, text, done=false) {
     let newItem = document.createElement('li');
     let label = document.createElement('label');
-    label.htmlFor = text;
+    label.htmlFor = `${index}_${text}`;
     label.appendChild(document.createTextNode(text));
     let checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
-    checkbox.id = text;
+    checkbox.id = `${index}_${text}`;
     if (done) {checkbox.checked = true}
     newItem.appendChild(checkbox);
     newItem.appendChild(label);
@@ -38,8 +38,8 @@ function markDone(list, checkbox) {
 
 function updateList(items) {
     clearList();
-    items.forEach(function(item) {
-        let newItem = createNewListItem(item.text, item.done);
+    items.forEach(function(item, index) {
+        let newItem = createNewListItem(index, item.text, item.done);
         itemsList.appendChild(newItem);
     });
 }
@@ -66,6 +66,9 @@ function resetItems() {
     storage.setItem('items', JSON.stringify([]));
     addItems.reset();
     clearList();
+    while (items.length > 0) {
+        items.pop();
+    }
 }
 
 itemsList.addEventListener('input', handleClickOnItem);
